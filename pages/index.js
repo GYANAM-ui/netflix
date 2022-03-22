@@ -14,6 +14,7 @@ import {
 import useRedirectUser from "../utils/redirectUser";
 
 export async function getServerSideProps(context) {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { userId, token } = await useRedirectUser(context);
   const watchItAgainVideos = await getWatchItAgainVideos(userId, token);
 
